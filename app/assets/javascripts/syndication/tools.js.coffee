@@ -193,11 +193,9 @@
         path: "cy/tools/prynu-ty/cyfrifiannell-fforddiadwyedd-morgais"
       title: "Mortgage affordability calculator"
 
-    payday_loans_intervention:
+    payday_loans:
       en:
         path: "en/payday-loans"
-      cy:
-        path: "cy/benthyciadau-diwrnod-cyflog"
       height: "1500px"
       width: "100%"
       include_ga: false
@@ -207,6 +205,16 @@
     pensions_calculator:
       en:
         path: "en/tools/pension-calculator"
+      cy:
+        path: "cy/tools/cyfrifiannell-pensiwn"
+      width: "100%"
+      height: "800px"
+      include_ga: false
+      title: "Pensions calculator"
+
+    pensions_calculator:
+      en:
+        path: "en/payday_loans"
       cy:
         path: "cy/tools/cyfrifiannell-pensiwn"
       width: "100%"
