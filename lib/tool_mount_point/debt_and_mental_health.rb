@@ -1,6 +1,6 @@
 module ToolMountPoint
-  module DebtMentalHealth
+  module DebtAndMentalHealth
     EN_ID = 'debt-and-mental-health'
-    CY_ID = ''
+    CY_ID = 'debt-and-mental-health-cy'
   end
 end
