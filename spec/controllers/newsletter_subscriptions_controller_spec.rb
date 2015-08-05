@@ -51,6 +51,11 @@ RSpec.describe NewsletterSubscriptionsController, type: :controller do
       let(:params) { { email: 'clark.kent@example.com', category: 'footer' } }
       let(:result) { true }
 
+      it 'sets cookie' do
+        post :create, locale: I18n.locale, subscription: params
+        expect(response.cookies['display_sticky_newsletter_form_cookie']).to eq 'hide'
+      end
+
       it 'adds a flash success message' do
         post :create, locale: I18n.locale, subscription: params
 
