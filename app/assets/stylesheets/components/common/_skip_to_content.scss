@@ -11,7 +11,7 @@
   top: -1000px;
   left: 0;
   background-color: $color-skip-to-content;
-  z-index: 12;
+  z-index: $z-foreground;
   
   &:focus {
     top: 0;
