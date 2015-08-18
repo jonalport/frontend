@@ -1,6 +1,10 @@
 RSpec.describe 'HTML validation', type: :feature do
   describe 'home page' do
-    before { visit root_path(locale: locale) }
+    before do
+      VCR.use_cassette 'cms/home-page' do
+        visit root_path(locale: locale)
+      end
+    end
 
     context 'in English' do
       let(:locale) { 'en' }

@@ -15,16 +15,18 @@ module Core::Repository
         @id = id
       end
 
-      def find(id)
-        Block.new(blocks.find { |block| block['identifier'] == id })
-      end
-
       def to_html
         parser.new(to_s).to_html
       end
 
       def to_s
         find(id).to_s
+      end
+
+      private
+
+      def find(id)
+        Block.new(blocks.find { |block| block['identifier'] == id })
       end
     end
   end

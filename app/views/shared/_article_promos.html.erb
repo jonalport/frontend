@@ -4,26 +4,15 @@
       <%= t('home.show.promoted_heading') %>
     <% end %>
 
-    <% items_with_image.each do |item| %>
-      <div class="l-promo-articles__item">
-        <div class="t-article-promos">
-          <%= link_to item[:url], class: 'promo__link' do %>
-            <%= image_tag("promos/#{item[:image]}", alt: '', class: 'promo__img') %>
-            <%= heading_tag(level: 2, class: "promo__heading #{item[:blog] ? 'promo__heading--blog' : ''}") do %>
-              <%= item[:text] %>
-            <% end %>
-            <p class="promo__content"><%= item[:content] %></p>
-          <% end %>
-        </div>
-      </div>
-    <% end %>
-
-    <div class="l-promo-articles__noimages">
-      <% items_without_image.each do |item| %>
-        <div class="l-promo-articles__item l-promo-articles__item--no-image">
-          <div class="t-article-promos-no-image">
+    <% if defined? items_with_image_from_cms %>
+      <% items_with_image_from_cms.each do |item| %>
+        <div class="l-promo-articles__item">
+          <div class="t-article-promos">
             <%= link_to item[:url], class: 'promo__link' do %>
-              <%= heading_tag(level: 2, class: 'promo__heading') do %>
+              <% if item[:image] != '' %>
+                <%= image_tag("#{item[:image]}", alt: '', class: 'promo__img') %>
+              <% end %>
+              <%= heading_tag(level: 2, class: "promo__heading #{item[:blog] == 'blog' ? 'promo__heading--blog' : ''}") do %>
                 <%= item[:text] %>
               <% end %>
               <p class="promo__content"><%= item[:content] %></p>
@@ -31,6 +20,39 @@
           </div>
         </div>
       <% end %>
-    </div>
+    <% end %>
+
+    <% if defined? items_with_image %>
+      <% items_with_image.each do |item| %>
+        <div class="l-promo-articles__item">
+          <div class="t-article-promos">
+            <%= link_to item[:url], class: 'promo__link' do %>
+              <%= image_tag("promos/#{item[:image]}", alt: '', class: 'promo__img') %>
+              <%= heading_tag(level: 2, class: "promo__heading #{item[:blog] ? 'promo__heading--blog' : ''}") do %>
+                <%= item[:text] %>
+              <% end %>
+              <p class="promo__content"><%= item[:content] %></p>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+
+    <% if defined? items_without_image %>
+      <div class="l-promo-articles__noimages">
+        <% items_without_image.each do |item| %>
+          <div class="l-promo-articles__item l-promo-articles__item--no-image">
+            <div class="t-article-promos-no-image">
+              <%= link_to item[:url], class: 'promo__link' do %>
+                <%= heading_tag(level: 2, class: 'promo__heading') do %>
+                  <%= item[:text] %>
+                <% end %>
+                <p class="promo__content"><%= item[:content] %></p>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
   </section>
 </div>

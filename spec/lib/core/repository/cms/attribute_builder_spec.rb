@@ -40,6 +40,14 @@ module Core::Repository::CMS
         expect(AttributeBuilder.build(response)['related_content']['next_link']).to be_present
       end
 
+      describe 'home page attributes' do
+        let(:body) { File.read('spec/fixtures/cms/home-page.json') }
+
+        it 'strips html tags' do
+          expect(AttributeBuilder.build(response)['hero_image']).to eql('http://localhost:3000/system/comfy/cms/files/files/000/000/067/original/atm_en.png')
+        end
+      end
+
       context 'when content type is markdown' do
         it 'body is html' do
           expect(AttributeBuilder.build(response)['body']).to include('<p><strong>Good money management can mean many things – from living within your means to saving for short and long-term goals, to having a realistic plan to pay off your debts. Read on if you want to learn how to set up a budget, make the most of your money, pay off debts or start saving.</strong></p>')
