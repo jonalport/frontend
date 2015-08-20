@@ -1,0 +1,30 @@
+.l-abi__right-col {
+  @include respond-to($mq-l) {
+    @include column(5);
+  }
+}
+
+.l-abi__button {
+  padding: $baseline-unit*2;
+  margin-top: $baseline-unit*2;
+
+  @include respond-to($mq-l) {
+    // @include column(5);
+    background: $color-grey-pale;
+  }
+}
+
+.l-abi__button .button {
+  margin-top: $baseline-unit*4;
+
+  @include respond-to($mq-l) {
+    margin-top: 0;
+  }
+}
+
+.l-abi__image {
+  max-width: 80%;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}

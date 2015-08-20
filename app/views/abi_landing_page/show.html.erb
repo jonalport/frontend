@@ -1,0 +1,26 @@
+<% set_meta_tags(title:       t('abi_landing_page.meta.title'),
+                 description: t('abi_landing_page.meta.description'),
+                 canonical:   t('abi_landing_page.meta.canonical'),
+                 alternate:   t('abi_landing_page.meta.alternate')) %>
+<div class="l-constrained">
+  <section class="l-debtmanagement">
+    <div class="l-debtmanagement__inner l-debtmanagement__inner--with-image">
+      <h1><%= t('abi_landing_page.page_heading') %></h1>
+      <% t('abi_landing_page.content').each do |item| %>
+      <p><%= item[:text] %></p>
+      <% end %>
+      <ul>
+      <% t('abi_landing_page.bullets').each do |item| %>
+        <li><%= item[:text] %></li>
+      <% end %>
+      </ul>
+      <a href="<%= t('abi_landing_page.link_one.url') %>"><%= t('abi_landing_page.link_one.text') %></a>
+    </div>
+    <div class="l-abi__right-col">
+      <%= image_tag('campaign/abi-protecting-your-world.jpg', alt: 'Protecting your world', class: 'l-abi__image') %>
+      <div class="l-abi__button">
+        <a class="button button--primary button--fill-width" href="//infographics.moneyadviceservice.org.uk/protecting-your-world-insurance-cover"><%= t('abi_landing_page.primary_button') %></a>
+      </div>
+    </div>
+  </section>
+</div>

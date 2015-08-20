@@ -1,0 +1,21 @@
+en:
+  abi_landing_page:
+    meta:
+      title: Protecting your world
+      description: Make sure you’ve got enough financial cover in place for when something goes wrong. You can protect your world with a combination of savings and insurance.
+      canonical: https://www.moneyadviceservice.org.uk/en/campaigns/protecting-your-world
+      alternate:
+        en-GB: https://www.moneyadviceservice.org.uk/en/campaigns/protecting-your-world
+        cy-GB: https://www.moneyadviceservice.org.uk/cy/campaigns/protecting-your-world
+    page_heading: Protecting your world
+    primary_button: Find the right financial protection for you
+    content:
+      - text: You might not like to think about it, but what would happen if you or your partner fell ill, or had an accident and couldn’t work anymore?
+      - text: Would you still be able to cover your rent or mortgage? What about bills and food?
+    bullets:
+      - text: More than one in six working families would get little or no help from the state if the main earner was unable to work.
+      - text: Having a safety net made up of savings and the right insurance, can give you peace of mind and make sure that you are protected if something goes wrong.
+      - text: Make sure you look at the whole picture before deciding what protection is right for you.
+    link_one:
+      text: Securing your financial future
+      url: https://www.moneyadviceservice.org.uk/en/articles/securing-your-financial-future

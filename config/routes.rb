@@ -215,6 +215,8 @@ Rails.application.routes.draw do
                     }x
               }
 
+    get '/campaigns/protecting-your-world', to: 'abi_landing_page#show'
+    
     get '/campaigns/debt-management', to: 'debt_management#show'
     get '/campaigns/debt-management/faq', to: 'debt_management#faq'
     get '/campaigns/debt-management/companies', to: 'debt_management#companies'
