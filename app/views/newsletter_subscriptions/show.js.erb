@@ -1,12 +1,21 @@
 (function() {
+  console.log('show.js.erb!');
+
   var isTest = <%= params[:subscription][:optimizely_test] || false %>,
       $newsletterForm = isTest ? $('.js-news-signup-test-form') : $('.js-newsletter-form'),
-      $newsletterInput = isTest ?
-        $('.js-news-signup-test-input') : $newsletterForm.find('.js-newsletter-input'),
-      errorClass = 'is-errored'
+      $newsletterInput = isTest ? $('.js-news-signup-test-input') : $newsletterForm.find('.js-newsletter-input'),
+      $newsletterSubmit = $newsletterForm.find('.newsletter-signup__button'),
+      errorClass = 'is-errored',
+      disabledClass = 'is-disabled',
       gaEventCat = isTest ? 'Newsletter SignUp Test' : 'Newsletter SignUp';
 
+  console.log('newsletterSubmit: ', $newsletterSubmit);
+
   <% if @success %>
+    console.log('success!');
+
+    $newsletterSubmit.addClass(disabledClass);
+
     require(['common'], function (MAS) {
       MAS.publish('analytics:trigger', {
         gaEventCat: gaEventCat,
@@ -23,6 +32,8 @@
 
     $newsletterInput.attr({'aria-invalid' : false });
   <% else %>
+    console.log('not success!');
+
     require(['common'], function (MAS) {
       MAS.publish('analytics:trigger', {
         gaEventCat: gaEventCat,

@@ -22,7 +22,16 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   Newsletter.prototype.init = function(initialised) {
     this._initialisedSuccess(initialised);
     this.showInArticle();
+    this.setUpSubmit();
     return this;
+  };
+
+  Newsletter.prototype.setUpSubmit = function() {
+    console.log('setUpSubmit!');
+    console.log('el: ', this.$el);
+
+    var newsletterSubmit = this.$el.find('.button');
+
   };
 
   Newsletter.prototype.showInArticle = function() {
