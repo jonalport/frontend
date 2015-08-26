@@ -27,11 +27,13 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   };
 
   Newsletter.prototype.setUpSubmit = function() {
-    console.log('setUpSubmit!');
-    console.log('el: ', this.$el);
+    var newsletterForm = this.$el.find('.js-news-signup-test-form');
+    var newsletterSubmit = $(newsletterForm).find('button[type=submit]');
+    var disabledClass = 'is-disabled';
 
-    var newsletterSubmit = this.$el.find('.button');
-
+    $(newsletterForm).on('submit', function() {
+      $(newsletterSubmit).addClass(disabledClass);
+    });
   };
 
   Newsletter.prototype.showInArticle = function() {
