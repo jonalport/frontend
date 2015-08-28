@@ -22,18 +22,7 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   Newsletter.prototype.init = function(initialised) {
     this._initialisedSuccess(initialised);
     this.showInArticle();
-    this.setUpSubmit();
     return this;
-  };
-
-  Newsletter.prototype.setUpSubmit = function() {
-    var newsletterForm = this.$el.find('.js-news-signup-test-form');
-    var newsletterSubmit = $(newsletterForm).find('button[type=submit]');
-    var disabledClass = 'is-disabled';
-
-    $(newsletterForm).on('submit', function() {
-      $(newsletterSubmit).addClass(disabledClass);
-    });
   };
 
   Newsletter.prototype.showInArticle = function() {
