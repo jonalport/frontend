@@ -11,10 +11,10 @@
     </ul>
   <% end %>
 
-
   <%= form_for(resource, as: resource_name,
                          url: registration_path(resource_name),
                          html: {class: "form", novalidate: 'novalidate'},
+                         data: {dough_component: 'DisableSubmitBtn'},
                          builder: Dough::Forms::Builders::Validation) do |f| %>
 
     <p><%= t("authentication.mandatory_warning") %></p>
