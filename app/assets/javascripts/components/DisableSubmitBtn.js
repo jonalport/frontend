@@ -20,19 +20,16 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   DisableSubmitBtn.componentName = 'DisableSubmitBtn';
 
   /**
-  * Addds the listener to the button to disable it when the form  is submitted
+  * Adds the listener to the button to disable it when the form is submitted
   */
   DisableSubmitBtn.prototype._addListener = function() {
-    var self = this;
-
-    this.$el.on('submit',
-      function(e) {
-        self.$submitButton.addClass(self.config.disabledClass);
-
-        return false;
-      }
+    this.$el.on(
+      'submit',
+      $.proxy(function() {
+        this.$submitButton.addClass(this.config.disabledClass);
+      }, this)
     );
-  }
+  };
 
   /**
   * @param {Promise} initialised
