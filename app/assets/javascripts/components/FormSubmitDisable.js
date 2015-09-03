@@ -3,7 +3,8 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
 
   var FormSubmitDisable,
       defaultConfig = {
-        disabledClass: 'is-disabled'
+        disabledClass: 'is-disabled',
+        disabledAttr: 'disabled'
       };
 
   FormSubmitDisable = function($el, config) {
@@ -26,7 +27,9 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
     this.$el.on(
       'submit',
       $.proxy(function() {
-        this.$submitButton.addClass(this.config.disabledClass);
+        this.$submitButton
+          .addClass(this.config.disabledClass)
+          .attr('disabled', this.config.disabledAttr);
       }, this)
     );
   };
