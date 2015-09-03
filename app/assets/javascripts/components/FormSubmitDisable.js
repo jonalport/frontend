@@ -1,13 +1,13 @@
 define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   'use strict';
 
-  var DisableSubmitBtn,
+  var FormSubmitDisable,
       defaultConfig = {
         disabledClass: 'is-disabled'
       };
 
-  DisableSubmitBtn = function($el, config) {
-    DisableSubmitBtn.baseConstructor.call(this, $el, config, defaultConfig);
+  FormSubmitDisable = function($el, config) {
+    FormSubmitDisable.baseConstructor.call(this, $el, config, defaultConfig);
 
     this.$submitButton = this.$el.find('[type=submit]');
   };
@@ -15,14 +15,14 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   /**
   * Inherit from base module, for shared methods and interface
   */
-  DoughBaseComponent.extend(DisableSubmitBtn);
+  DoughBaseComponent.extend(FormSubmitDisable);
 
-  DisableSubmitBtn.componentName = 'DisableSubmitBtn';
+  FormSubmitDisable.componentName = 'FormSubmitDisable';
 
   /**
   * Adds the listener to the button to disable it when the form is submitted
   */
-  DisableSubmitBtn.prototype._addListener = function() {
+  FormSubmitDisable.prototype._addListener = function() {
     this.$el.on(
       'submit',
       $.proxy(function() {
@@ -34,10 +34,10 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   /**
   * @param {Promise} initialised
   */
-  DisableSubmitBtn.prototype.init = function(initialised) {
+  FormSubmitDisable.prototype.init = function(initialised) {
     this._initialisedSuccess(initialised);
     this._addListener();
   };
 
-  return DisableSubmitBtn;
+  return FormSubmitDisable;
 });
