@@ -1,17 +1,17 @@
-describe.only('DisableSubmitBtn', function() {
+describe.only('FormSubmitDisable', function() {
 
   'use strict';
 
   beforeEach(function (done) {
     var self = this;
 
-    requirejs(['jquery', 'DisableSubmitBtn'], function ($, DisableSubmitBtn) {
-      self.$html = $(window.__html__['spec/javascripts/fixtures/DisableSubmitBtn.html']);
+    requirejs(['jquery', 'FormSubmitDisable'], function ($, FormSubmitDisable) {
+      self.$html = $(window.__html__['spec/javascripts/fixtures/FormSubmitDisable.html']);
 
       self.$submit = self.$html.find('[type="submit"]');
       self.$form = self.$html.find('form');
 
-      self.component = new DisableSubmitBtn(self.$html);
+      self.component = new FormSubmitDisable(self.$html);
       done();
     }, done);
   });
