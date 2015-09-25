@@ -1,4 +1,4 @@
-define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
+define(['jquery', 'DoughBaseComponent', 'eventsWithPromises'], function($, DoughBaseComponent, eventsWithPromises) {
   'use strict';
 
   var FormSubmitDisable,
@@ -24,22 +24,30 @@ define(['jquery', 'DoughBaseComponent'], function($, DoughBaseComponent) {
   * Adds the listener to the button to disable it when the form is submitted
   */
   FormSubmitDisable.prototype._addListener = function() {
+    eventsWithPromises.subscribe('formSubmitDisable:formSubmit', $.proxy(function() {
+      this._disableSubmitBtn();
+    }, this));
+
     this.$el.on(
       'submit',
       $.proxy(function() {
-        this.$submitButton
-          .addClass(this.config.disabledClass)
-          .attr('disabled', this.config.disabledAttr);
+        eventsWithPromises.publish('formSubmitDisable:formSubmit');
       }, this)
     );
   };
+
+  FormSubmitDisable.prototype._disableSubmitBtn = function() {
+    this.$submitButton
+      .addClass(this.config.disabledClass)
+      .attr('disabled', this.config.disabledAttr);
+  }
 
   /**
   * @param {Promise} initialised
   */
   FormSubmitDisable.prototype.init = function(initialised) {
-    this._initialisedSuccess(initialised);
     this._addListener();
+    this._initialisedSuccess(initialised);
   };
 
   return FormSubmitDisable;
