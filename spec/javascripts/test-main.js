@@ -33,7 +33,7 @@ require.config({
     ClearInput: 'app/assets/javascripts/components/ClearInput',
     Newsletter: 'app/assets/javascripts/components/Newsletter',
     StickyColumn: 'app/assets/javascripts/components/StickyColumn',
-    // FormSubmitDisable: 'app/assets/javascripts/components/FormSubmitDisable',
+    FormSubmitDisable: 'app/assets/javascripts/components/FormSubmitDisable',
     EmbedCodeGenerator: 'app/assets/javascripts/components/EmbedCodeGenerator',
 
     rsvp: 'vendor/assets/bower_components/rsvp/rsvp',

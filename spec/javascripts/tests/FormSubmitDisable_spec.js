@@ -4,11 +4,15 @@ describe('FormSubmitDisable', function() {
   beforeEach(function (done) {
     var self = this;
 
-    requirejs(['jquery', 'FormSubmitDisable'], function ($, FormSubmitDisable) {
+    requirejs(['jquery', 'FormSubmitDisable', 'eventsWithPromises'], function ($, FormSubmitDisable, eventsWithPromises) {
       self.$html = $(window.__html__['spec/javascripts/fixtures/FormSubmitDisable.html']);
       self.$submit = self.$html.find('[type="submit"]');
       self.$form = self.$html.find('form');
+      self.eventsWithPromises = eventsWithPromises;
       self.component = new FormSubmitDisable(self.$html);
+
+      self.eventsWithPromises.unsubscribeAll();
+      self.component.init();
 
       done();
     }, done);
@@ -18,19 +22,10 @@ describe('FormSubmitDisable', function() {
     $('body').empty();
   });
 
-  /*
-  it('is sane', function() {
-    expect(true).to.equal(true);
-  });
-  */
-
-  /*
-  it('disables the submit button on submit', function() {
-    var submitSpy = sinon.spy();
-
-    this.$form.on('submit', submitSpy);
+  it('disables the submit button on event firing', function() {
+    this.eventsWithPromises.publish('formSubmitDisable:formSubmit');
 
     expect(this.$submit).to.have.class('is-disabled');
+    expect(this.$submit.attr('disabled')).to.equal('disabled');
   });
-  */
 });
