@@ -7,7 +7,9 @@
       disabledClass = 'is-disabled',
       gaEventCat = isTest ? 'Newsletter SignUp Test' : 'Newsletter SignUp';
 
-  $newsletterSubmit.removeClass(disabledClass);
+  $newsletterSubmit
+    .removeClass(disabledClass)
+    .removeAttr('disabled');
 
   <% if @success %>
     require(['common'], function (MAS) {
