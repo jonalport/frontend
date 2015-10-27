@@ -1,0 +1,58 @@
+cy:
+  survive-january:
+    meta:
+      title: Survive January
+      description: ''
+      canonical: ''
+      alternate_url:
+        en-GB: https://www.moneyadviceservice.org.uk/en/campaigns/goroesi-Ionawr
+        cy-GB: https://www.moneyadviceservice.org.uk/en/campaigns/survive-january
+    section:
+      heading: Survive January
+      tagline: Tagline if any
+      content:
+        - text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis justo pulvinar, placerat eros ut, fringilla sem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam quis risus ante. Sed fringilla magna vitae mi ornare, et dapibus urna pretium. Proin mollis commodo leo, varius blandit diam. Nulla nec libero sodales, lobortis lorem sed, semper lacus. Vestibulum vitae dignissim nisi. Mauris tincidunt, magna id egestas maximus, dolor dui interdum leo, non convallis lorem elit nec nibh. Suspendisse vehicula molestie vulputate. Aliquam vel purus in risus congue eleifend sit amet eu dolor. Quisque suscipit posuere elit in posuere.
+        - text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis justo pulvinar, placerat eros ut, fringilla sem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam quis risus ante. Sed fringilla magna vitae mi ornare, et dapibus urna pretium. Proin mollis commodo leo, varius blandit diam. Nulla nec libero sodales, lobortis lorem sed, semper lacus. Vestibulum vitae dignissim nisi. Mauris tincidunt, magna id egestas maximus, dolor dui interdum leo, non convallis lorem elit nec nibh.
+        - text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis justo pulvinar, placerat eros ut, fringilla sem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam quis risus ante. Sed fringilla magna vitae mi ornare, et dapibus urna pretium. Proin mollis commodo leo, varius blandit diam. Nulla nec libero sodales, lobortis lorem sed, semper lacus. Vestibulum vitae dignissim nisi.
+    next_steps_heading: Next steps
+    next_steps:
+      - url: /en/tools/budget-planner
+        heading: Budget planner
+        text: How much spending money do you have after you've paid your most important bills?
+      - url: /en/tools/quick-cash-finder
+        heading: Quick cash finder
+        text: Use our Quick cash finder tool to discover how you could quickly find and save money
+      - url: /en/tools/debt-advice-locator
+        heading: Debt advice locator
+        text: If you’re struggling with debt, it can be hard to know where to turn.
+    blog_links:
+      - title: "Section 1"
+        links:
+          - text: Link 1
+            url:
+          - text: Link 2
+            url:
+          - text: Link 3
+            url:
+          - text: Link 4
+            url:
+      - title: "Section 2"
+        links:
+          - text: Link 1
+            url:
+          - text: Link 2
+            url:
+          - text: Link 3
+            url:
+          - text: Link 4
+            url:
+      - title: "Section 3"
+        links:
+          - text: Link 1
+            url:
+          - text: Link 2
+            url:
+          - text: Link 3
+            url:
+          - text: Link 4
+            url:

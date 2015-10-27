@@ -1,0 +1,53 @@
+<% set_meta_tags(title:       t('survive-january.meta.title'),
+                 description: t('survive-january.meta.description'),
+                 canonical:   t('survive-january.meta.canonical'),
+                 alternate:   t('survive-january.meta.alternate_url')) %>
+
+<div class="l-constrained">
+  <article>
+  	<div class="l-campaign__content l-campaign__content--padded-top">
+      <%= heading_tag t('survive-january.section.heading'), class: 'l-campaign__heading', level: 1 %>
+      <p class="l-campaign__tagline"><%= t('survive-january.section.tagline') %></p>
+      <% t('survive-january.section.content').each do |item| %>
+        <p><%= item[:text] %></p>
+      <% end %>
+  	</div>
+
+  	<section class="l-campaign__next-steps">
+      <%= image_tag('atm_en.png', alt: '', class: 'l-campaign-image') %>
+      <%= heading_tag t('survive-january.next_steps_heading'), class: 'l-campaign__next-steps-heading', level: 2 %>
+      <% t('survive-january.next_steps').each do |item| %>
+      <div class="next-step">
+        <%= link_to(item[:url], class: 'next-step__link') do %>
+        <%= heading_tag(item[:heading], level: heading_level ||= 2, class: 'next-step__heading') %>
+        <p class="next-step__content"><%= item[:text] %></p>
+        <% end %>
+      </div>
+      <% end %>
+    </section>
+  </article>
+</div>
+
+<div class="l-section l-section--odd">
+  <div class="l-constrained">
+    <% t('survive-january.blog_links').each do |panel| %>
+      <div class="l-3col-even">
+        <h2><%= panel[:title] %></h2>
+        <ul class="link-list">
+          <% panel[:links].each do |link| %>
+            <li><%= link_to link[:text], link[:url] %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="l-campaign-directory">
+  <div class="l-constrained">
+    <%= heading_tag(level: heading_level ||= 2, class: 'l-home-directory__title') do %>
+      <%= t('home.show.directory_heading_two') %>
+    <% end %>
+    <%= render 'shared/directory', items: category_navigation, heading_level: 4 %>
+  </div>
+</div>
