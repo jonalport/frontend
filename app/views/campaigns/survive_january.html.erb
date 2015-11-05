@@ -28,12 +28,21 @@
   </article>
 </div>
 
-<div class="l-section l-section--odd">
+<div class="l-section">
   <div class="l-constrained">
     <% t('survive-january.blog_links').each do |panel| %>
       <div class="l-3col-even">
         <h2><%= panel[:title] %></h2>
-        <ul class="link-list">
+
+        <div class="t-article-promos">
+          <a class="promo__link" href="<%= panel[:promo_url] %>">
+            <img class="promo__img" src="<%= panel[:promo_img_src] %>" />
+            <h2 class="promo__heading promo__heading--blog"><%= panel[:promo_heading] %></h2>
+            <p class="promo__content"><%= panel[:promo_content] %></p>
+          </a>
+        </div>
+
+        <ul>
           <% panel[:links].each do |link| %>
             <li><%= link_to link[:text], link[:url] %></li>
           <% end %>
@@ -43,6 +52,7 @@
   </div>
 </div>
 
+<!--
 <div class="l-campaign-directory">
   <div class="l-constrained">
     <%= heading_tag(level: heading_level ||= 2, class: 'l-home-directory__title') do %>
@@ -51,3 +61,4 @@
     <%= render 'shared/directory', items: category_navigation, heading_level: 4 %>
   </div>
 </div>
+-->

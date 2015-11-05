@@ -13,7 +13,6 @@ cy:
       content:
         - text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis justo pulvinar, placerat eros ut, fringilla sem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam quis risus ante. Sed fringilla magna vitae mi ornare, et dapibus urna pretium. Proin mollis commodo leo, varius blandit diam. Nulla nec libero sodales, lobortis lorem sed, semper lacus. Vestibulum vitae dignissim nisi. Mauris tincidunt, magna id egestas maximus, dolor dui interdum leo, non convallis lorem elit nec nibh. Suspendisse vehicula molestie vulputate. Aliquam vel purus in risus congue eleifend sit amet eu dolor. Quisque suscipit posuere elit in posuere.
         - text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis justo pulvinar, placerat eros ut, fringilla sem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam quis risus ante. Sed fringilla magna vitae mi ornare, et dapibus urna pretium. Proin mollis commodo leo, varius blandit diam. Nulla nec libero sodales, lobortis lorem sed, semper lacus. Vestibulum vitae dignissim nisi. Mauris tincidunt, magna id egestas maximus, dolor dui interdum leo, non convallis lorem elit nec nibh.
-        - text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis justo pulvinar, placerat eros ut, fringilla sem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam quis risus ante. Sed fringilla magna vitae mi ornare, et dapibus urna pretium. Proin mollis commodo leo, varius blandit diam. Nulla nec libero sodales, lobortis lorem sed, semper lacus. Vestibulum vitae dignissim nisi.
     next_steps_heading: Next steps
     next_steps:
       - url: /en/tools/budget-planner
@@ -26,7 +25,11 @@ cy:
         heading: Debt advice locator
         text: If you’re struggling with debt, it can be hard to know where to turn.
     blog_links:
-      - title: "Section 1"
+      - title: "Food"
+        promo_url: https://www.moneyadviceservice.org.uk
+        promo_img_src: https://6716c801720b2d014ddd-90dd74bb468e514261468bbc28ae4817.ssl.cf3.rackcdn.com/a/promos/explore-your-retirement-options-49705da4527ca09b6c9bf1e283894958.jpg
+        promo_heading: Promo article heading
+        promo_content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rutrum malesuada nulla, in suscipit enim volutpat id.
         links:
           - text: Link 1
             url:
@@ -36,7 +39,11 @@ cy:
             url:
           - text: Link 4
             url:
-      - title: "Section 2"
+      - title: "Home"
+        promo_url: https://www.moneyadviceservice.org.uk
+        promo_img_src: https://6716c801720b2d014ddd-90dd74bb468e514261468bbc28ae4817.ssl.cf3.rackcdn.com/a/promos/explore-your-retirement-options-49705da4527ca09b6c9bf1e283894958.jpg
+        promo_heading: Promo article heading
+        promo_content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rutrum malesuada nulla, in suscipit enim volutpat id.
         links:
           - text: Link 1
             url:
@@ -46,7 +53,11 @@ cy:
             url:
           - text: Link 4
             url:
-      - title: "Section 3"
+      - title: "You"
+        promo_url: https://www.moneyadviceservice.org.uk
+        promo_img_src: https://6716c801720b2d014ddd-90dd74bb468e514261468bbc28ae4817.ssl.cf3.rackcdn.com/a/promos/explore-your-retirement-options-49705da4527ca09b6c9bf1e283894958.jpg
+        promo_heading: Promo article heading
+        promo_content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rutrum malesuada nulla, in suscipit enim volutpat id.
         links:
           - text: Link 1
             url:
