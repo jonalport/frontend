@@ -110,9 +110,9 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     addressable (2.3.8)
-    advice_plans (3.1.1.348)
-      devise (~> 3.2.4)
-      dough-ruby (~> 5.0)
+advice_plans (3.1.1.360)
+      devise (~> 3.4.1)
+      dough-ruby (~> 5.0.0)
       friendly_id (~> 5.0.0)
       hashie
       i18n-js (= 3.0.0.mas)
@@ -120,8 +120,7 @@ GEM
       kaminari (~> 0.16.1)
       mas-mailer (~> 0.3)
       meta-tags
-      mysql2
-      rails (~> 4.1.5)
+      rails (~> 4.1.8)
       redcarpet (~> 3.2.0)
       sass-rails (~> 4.0.3)
       transitions (~> 0.1.11)
